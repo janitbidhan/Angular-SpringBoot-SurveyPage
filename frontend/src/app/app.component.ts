@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Janit Bidhan';
 
   constructor(ts: TestService){
-    ts.printScreen("Welcome to page")
+    //ts.printScreen("Welcome to page")
   }
 
   ngOnInit(){
