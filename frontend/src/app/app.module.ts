@@ -13,7 +13,7 @@ import { Route, RouterModule, Routes } from '@angular/router';
 
 const objectRoutes:Routes=[
 {
-  path:"home",
+  path:"survey",
   component:BodyComponent,
 }]
 
