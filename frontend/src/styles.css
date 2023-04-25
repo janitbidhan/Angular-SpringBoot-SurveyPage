@@ -23,23 +23,17 @@ body {
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
     -1px 1px 0 #000000,
-    1px 1px 0 #000000,  
+    1px 1px 0 #000000,
     -2px 0 0 #000000,
     2px 0 0 #000000,
     0 2px 0 #000000,
-    0 -2px 0 #000000; 
-}
-/* Defines font style to display on the header banner on each page */
-.gmuTitle{
-  font-family: cursive;
-  size: 10px;
-  text-align: center;
-  padding-top: 10px;
+    0 -2px 0 #000000;
 }
 
+
 .first-content{
-  margin-top: 10px; 
-  margin-left: 10px; 
+  margin-top: 10px;
+  margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 1opx;
 }
@@ -51,21 +45,21 @@ body {
   margin-top: 10px;
 }
 .para-1 {
-  margin-left: 20px; 
+  margin-left: 20px;
   font-size:larger;
 }
 .link-to-cs {
-  background-color: #006633; 
+  background-color: #006633;
   margin-right: 10px;
 }
 .more-resource-text{
-  font-family: serif; 
-  text-align: center; 
+  font-family: serif;
+  text-align: center;
   margin-top: 10px;
 }
 /* Defines the yellow side banner on the gmuPage */
 .yellow-sidebar {
-  background-color: #FFCC33; 
+  background-color: #FFCC33;
   margin-right: 15px;
 }
 /* Defines required asterisk display style */

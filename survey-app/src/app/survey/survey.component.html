@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 <head>
   <!-- Name of web page -->
   <title>Survey</title>
@@ -7,13 +6,15 @@
   <!-- Link to Bootstrap CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body style="background-color: powderblue; width: 100vw; min-height: 100vh;">
+<body style="background-color: powderblue;">
   <!-- Defines Header Banner of the Page -->
-  <div class="csheader">
-    <h1 class="gmuTitle OutlineText shadow" style="font-size: 50px;">GMU Campus Survey</h1>
-  </div>
+  <div style="background: #FFCC33; height: fit-content;"><h1 style="font-family: cursive;
+    size: 10px;
+    text-align: center;
+    padding-top: 10px;">CAMPUS SURVEY</h1></div>
+
   <!-- Page Container for the Form and Enables Autocomplete-->
-  <nav class="navbar bg-body-tertiary rounded-3 first-content shadow p-3 mb-5 bg-body-tertiary rounded">
+  <nav style="width: 80%;margin: 0 auto;" class="navbar bg-body-tertiary rounded-3 first-content shadow p-3 mb-5 bg-body-tertiary rounded">
     <form class="survey-form" (ngSubmit)="submitForm()" #surveyForm="ngForm" autocomplete="on" style="margin-left: 40px;">
       <!-- Defines the first row -->
       <div class="row">
@@ -47,7 +48,7 @@
           <label for="city" class="form-label required">City:</label>
           <input type="text" id="city" name="city" class="form-control" [(ngModel)]="formData.city" required>
         </div>
-        
+
         <!-- State Info -->
         <div class="mb-3 col">
           <label for="state" class="form-label required">State:</label>
@@ -58,13 +59,13 @@
 
         <!-- Defines the second row -->
       <div class="row">
-            
+
             <!-- Street Address Info -->
           <div class="mb-3 col">
             <label for="streetAddress" class="form-label required">Street Address:</label>
             <input type="text" id="streetAddress" name="streetAddress" class="form-control" [(ngModel)]="formData.streetAddress" required>
           </div>
-          
+
           <!-- Zip Code Info -->
           <div class="mb-3 col">
             <label for="zip" class="form-label required">Zip Code:</label>
@@ -78,7 +79,7 @@
           </div>
 
       </div>
-      
+
 
       <!-- Defines three of the questions -->
       <div class="row" style="margin-left: 10px;">
@@ -89,14 +90,14 @@
             1. What did you like the most about the campus?
           </label>
             <!-- Defines the use fo check boxes using these selection choices -->
-            <!-- Student -->  
+            <!-- Student -->
             <div class="form-check" style="margin-top: 10px">
               <label  for="likedOptions_students">
                 <input type="checkbox" id="likedOptions_students" name="likedOptions[students]" [(ngModel)]="formData.likedOptions_students">
                 Students
               </label>
             </div>
-            <!-- Location -->  
+            <!-- Location -->
           <div class="form-check">
             <label for="likedOptions_location">
               <input type="checkbox" id="likedOptions_location" name="likedOptions[location]" [(ngModel)]="formData.likedOptions_location">
@@ -104,7 +105,7 @@
             </label>
           </div>
 
-          <!-- Campus --> 
+          <!-- Campus -->
           <div class="form-check">
             <label for="likedOptions_campus">
               <input type="checkbox" id="likedOptions_campus" name="likedOptions[campus]" [(ngModel)]="formData.likedOptions_campus">
@@ -112,7 +113,7 @@
             </label>
           </div>
 
-          <!-- Atmosphere --> 
+          <!-- Atmosphere -->
           <div class="form-check">
             <label for="likedOptions_atmosphere">
               <input type="checkbox" id="likedOptions_atmosphere" name="likedOptions[atmosphere]" [(ngModel)]="formData.likedOptions_atmosphere">
@@ -120,7 +121,7 @@
             </label>
           </div>
 
-          <!-- Dorm Rooms --> 
+          <!-- Dorm Rooms -->
           <div class="form-check">
             <label for="likedOptions_dormRooms">
               <input type="checkbox" id="likedOptions_dormRooms" name="likedOptions[dormRooms]" [(ngModel)]="formData.likedOptions_dormRooms">
@@ -128,9 +129,9 @@
             </label>
           </div>
 
-          <!-- Sports --> 
+          <!-- Sports -->
           <div class="form-check">
-            <label for="likedOptions_sports"> 
+            <label for="likedOptions_sports">
               <input type="checkbox" id="likedOptions_sports" name="likedOptions[sports]" [(ngModel)]="formData.likedOptions_sports">
               Sports
             </label>
@@ -190,7 +191,7 @@
             <option value="Unlikely">Unlikely</option>
           </select>
         </div>
-          
+
       </div>
     </div>
 
@@ -202,7 +203,7 @@
         </div>
         <textarea id="additionalComments" name="additionalComments" style="resize:vertical; padding-bottom: 10px;" [(ngModel)]="formData.additionalComments"></textarea>
       </div>
-     
+
 
     <div class="row" style="padding-top: 20px;">
       <div class="col">
