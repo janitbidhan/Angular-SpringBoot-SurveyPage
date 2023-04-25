@@ -1,0 +1,113 @@
+<router-outlet></router-outlet>
+
+<form class="survey-form" (ngSubmit)="submitForm()" #surveyForm="ngForm">
+  <h2>GMU Campus Survey</h2>
+
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.firstName" required>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="formData.lastName" required>
+  </div>
+
+  <div class="form-group">
+    <label for="streetAddress">Street Address:</label>
+    <input type="text" id="streetAddress" name="streetAddress" [(ngModel)]="formData.streetAddress" required>
+  </div>
+
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" [(ngModel)]="formData.city" required>
+  </div>
+
+  <div class="form-group">
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" [(ngModel)]="formData.state" required>
+  </div>
+
+  <div class="form-group">
+    <label for="zip">Zip:</label>
+    <input type="text" id="zip" name="zip" [(ngModel)]="formData.zip" required>
+  </div>
+
+  <div class="form-group">
+    <label for="telephoneNumber">Telephone Number:</label>
+    <input type="text" id="telephoneNumber" name="telephoneNumber" [(ngModel)]="formData.telephoneNumber" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="dateOfSurvey">Date of Survey:</label>
+    <input type="datetime-local" id="dateOfSurvey" name="dateOfSurvey" [(ngModel)]="formData.dateOfSurvey" required>
+  </div>
+
+  <div class="form-group">
+    <label>What did you like most about our campus?</label>
+    <div>
+      <input type="checkbox" id="likedOptions_students" name="likedOptions[students]" [(ngModel)]="formData.likedOptions_students">
+      <label for="likedOptions_students">Students</label>
+    </div>
+    <div>
+      <input type="checkbox" id="likedOptions_location" name="likedOptions[location]" [(ngModel)]="formData.likedOptions_location">
+      <label for="likedOptions_location">Location</label>
+    </div>
+    <div>
+      <input type="checkbox" id="likedOptions_campus" name="likedOptions[campus]" [(ngModel)]="formData.likedOptions_campus">
+      <label for="likedOptions_campus">Campus</label>
+    </div>
+    <div>
+      <input type="checkbox" id="likedOptions_atmosphere" name="likedOptions[atmosphere]" [(ngModel)]="formData.likedOptions_atmosphere">
+      <label for="likedOptions_atmosphere">Atmosphere</label>
+    </div>
+    <div>
+      <input type="checkbox" id="likedOptions_dormRooms" name="likedOptions[dormRooms]" [(ngModel)]="formData.likedOptions_dormRooms">
+      <label for="likedOptions_dormRooms">Dorm Rooms</label>
+    </div>
+    <div>
+      <input type="checkbox" id="likedOptions_sports" name="likedOptions[sports]" [(ngModel)]="formData.likedOptions_sports">
+      <label for="likedOptions_sports">Sports</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>How did you become interested in our university?</label>
+    <div>
+      <input type="radio" id="interestedSource_friends" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSource_friends">
+      <label for="interestedSource_friends">Friends</label>
+    </div>
+    <div>
+      <input type="radio" id="interestedSource_television" name="interestedSource" value="television" [(ngModel)]="formData.interestedSource_television">
+      <label for="interestedSource_television">Television</label>
+    </div>
+    <div>
+      <input type="radio" id="interestedSource_internet" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSource_internet">
+      <label for="interestedSource_internet">Internet</label>
+    </div>
+    <div>
+      <input type="radio" id="interestedSource_other" name="interestedSource" value="other" [(ngModel)]="formData.interestedSource_other">
+      <label for="interestedSource_other">Other:</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="recommend">Would you recommend our university to other prospective students?</label>
+    <select id="recommend" name="recommend" [(ngModel)]="formData.recommend">
+      <option value="" disabled selected>Select an option</option>
+      <option value="Very Likely">Very Likely</option>
+      <option value="Likely">Likely</option>
+      <option value="Unlikely">Unlikely</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="additionalComments">Additional Comments:</label>
+    <textarea id="additionalComments" name="additionalComments" [(ngModel)]="formData.additionalComments"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" id="submit">Submit</button>
+  </div>
+</form>
