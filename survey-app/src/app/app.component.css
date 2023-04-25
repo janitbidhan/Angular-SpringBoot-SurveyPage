@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+/**
+* AUTHOR: ROSY SULTANA
+*/
+
+/* Defines the background color for the body of gmuPage */
+body {
+    background-color: powderblue;
+  }
+  /* Defines the header banner style to be used in all 3 pages */
+  .csheader {
+    background-color:#006633;
+    height: 80px;
+  }
+  /* Defines style to outline the text with black */
+  .OutlineText {
+      font: Tahoma, Geneva, sans-serif;
+      color: white;
+      text-shadow:
+      /* Outline */
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000,  
+      -2px 0 0 #000000,
+      2px 0 0 #000000,
+      0 2px 0 #000000,
+      0 -2px 0 #000000; 
+  }
+  /* Defines font style to display on the header banner on each page */
+  .gmuTitle{
+    font-family: cursive;
+    size: 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .first-content{
+    margin-top: 10px; 
+    margin-left: 10px; 
+    margin-right: 10px;
+    margin-bottom: 1opx;
+  }
+  .header-1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #006633;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .para-1 {
+    margin-left: 20px; 
+    font-size:larger;
+  }
+  .link-to-cs {
+    background-color: #006633; 
+    margin-right: 10px;
+  }
+  .more-resource-text{
+    font-family: serif; 
+    text-align: center; 
+    margin-top: 10px;
+  }
+  /* Defines the yellow side banner on the gmuPage */
+  .yellow-sidebar {
+    background-color: #FFCC33; 
+    margin-right: 15px;
+  }
+  /* Defines required asterisk display style */
+  .required:after {
+    content:" *";
+    color: red;
+  }
+  /* Defines style of scrolling */
+  html {
+    scroll-behavior: smooth;
+  }

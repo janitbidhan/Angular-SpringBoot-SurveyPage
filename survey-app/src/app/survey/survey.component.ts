@@ -57,6 +57,7 @@ export class SurveyComponent {
     this.http.post('http://localhost:8080/surveys', surveyData, {headers: headers}).subscribe((response) => {
       console.log('Response: ', response);
     });
+    window.location.href = '/';
   }
 
 }
