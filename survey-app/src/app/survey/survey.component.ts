@@ -35,6 +35,7 @@ export class SurveyComponent {
       telephoneNumber: this.formData.telephoneNumber,
       email: this.formData.email,
       dateOfSurvey: this.formData.dateOfSurvey,
+      // Change here for better storing of jsons string
       likedOptions: JSON.stringify({
         students: this.formData.likedOptions_students=== 'true',
         location: this.formData.likedOptions_location=== 'true',

@@ -11,5 +11,6 @@ EXPOSE 8080
 
 CMD ["java", "-jar", "assignment3-1.jar"]
 
+# mvn clean install
 # docker build -t survey_backend_642 .
 # docker run -p 8080:8080 --rm  --name survey_backend_container survey_backend_642
