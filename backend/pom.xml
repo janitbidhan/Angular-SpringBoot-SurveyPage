@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.swe</groupId>
     <artifactId>assignment3</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>assignment3</name>
     <description>assignment3</description>
     <properties>
