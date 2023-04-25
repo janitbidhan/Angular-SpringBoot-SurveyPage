@@ -8,6 +8,7 @@ import { SurveyComponent } from './survey/survey.component';
 import { SurveyListComponent } from './survey-list/survey-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+
 // @ts-ignore
 @NgModule({
   declarations: [

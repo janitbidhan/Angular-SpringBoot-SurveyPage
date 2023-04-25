@@ -14,16 +14,19 @@ export class SurveyComponent {
     likedOptions_atmosphere: false,
     likedOptions_dormRooms: false,
     likedOptions_sports: false,
-    interestedSource_friends: false,
-    interestedSource_television: false,
-    interestedSource_internet: false,
-    interestedSource_other: false
   };
 
   constructor(private http: HttpClient) {}
 
   submitForm() {
-    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+
+    // Check if required fields are filled out
+    if (!this.formData.firstName || !this.formData.lastName || !this.formData.email || !this.formData.streetAddress ||
+      !this.formData.city || !this.formData.state || !this.formData.zip || !this.formData.telephoneNumber ||
+      !this.formData.dateOfSurvey) {
+      alert('Please fill out required fields.');
+      return;
+    }
 
     const surveyData = {
       firstName: this.formData.firstName,
@@ -36,28 +39,38 @@ export class SurveyComponent {
       email: this.formData.email,
       dateOfSurvey: this.formData.dateOfSurvey,
       // Change here for better storing of jsons string
-      likedOptions: JSON.stringify({
-        students: this.formData.likedOptions_students=== 'true',
-        location: this.formData.likedOptions_location=== 'true',
-        campus: this.formData.likedOptions_campus=== 'true',
-        atmosphere: this.formData.likedOptions_atmosphere=== 'true',
-        dormRooms: this.formData.likedOptions_dormRooms=== 'true',
-        sports: this.formData.likedOptions_sports=== 'true'
-      }),
-      interestedSource: JSON.stringify({
-        friends: this.formData.interestedSource_friends=== 'true',
-        television: this.formData.interestedSource_television=== 'true',
-        internet: this.formData.interestedSource_internet=== 'true',
-        other: this.formData.interestedSource_other=== 'true'
-      }),
+      likedOptions: [
+        this.formData.likedOptions_students === true ? 'students' : '',
+        this.formData.likedOptions_location === true ? 'location' : '',
+        this.formData.likedOptions_campus === true ? 'campus' : '',
+        this.formData.likedOptions_atmosphere === true ? 'atmosphere' : '',
+        this.formData.likedOptions_dormRooms === true ? 'dormRooms' : '',
+        this.formData.likedOptions_sports === true ? 'sports' : '',
+      ].filter(Boolean),
+      interestedSource:this.formData.interestedSource,
       recommend: this.formData.recommend,
       additionalComments: this.formData.additionalComments
     };
 
-    this.http.post('http://localhost:8080/surveys', surveyData, {headers: headers}).subscribe((response) => {
-      console.log('Response: ', response);
-    });
-    window.location.href = '/';
+    // Check if atleast 2 options are selected from formData likedoption
+    if (surveyData.likedOptions.length < 2) {
+      alert('Please select at least two options from the Liked Options section.');
+      return
+    }
+    // Doing post call
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    this.http.post('http://localhost:8080/surveys', surveyData, {headers: headers}).subscribe(
+      (response) => {
+        console.log('Response: ', response);
+        alert('Thank you for your feedback!');
+        window.location.href = '/';
+      },
+      (error) => {
+        console.error('Error: ', error);
+        alert('Sorry, there was an error submitting your feedback. Please try again later.');
+      }
+    );
+
   }
 
 }

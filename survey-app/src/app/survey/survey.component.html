@@ -82,8 +82,8 @@
 
 
       <!-- Defines three of the questions -->
+      <div class="row" style="font-weight: bold; margin: 10px;"> Please answer of the choices: </div>
       <div class="row" style="margin-left: 10px;">
-
         <div class="col">
 
           <label>
@@ -147,7 +147,7 @@
           <!-- Friends -->
           <div class="form-check" style="margin-top: 10px">
             <label for="interestedSource_friends">
-              <input type="radio" id="interestedSource_friends" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSource_friends">
+              <input type="radio" id="interestedSource_friends" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSources">
               Friends
             </label>
           </div>
@@ -155,7 +155,7 @@
           <!-- Television -->
           <div class="form-check">
             <label for="interestedSource_television">
-              <input type="radio" id="interestedSource_television" name="interestedSource" value="television" [(ngModel)]="formData.interestedSource_television">
+              <input type="radio" id="interestedSource_television" name="interestedSource" value="television" [(ngModel)]="formData.interestedSources">
               Television
             </label>
           </div>
@@ -163,7 +163,7 @@
           <!-- Internet -->
           <div class="form-check">
             <label for="interestedSource_internet">
-              <input type="radio" id="interestedSource_internet" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSource_internet">
+              <input type="radio" id="interestedSource_internet" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSources">
               Internet
             </label>
           </div>
@@ -172,7 +172,7 @@
           <!-- Other -->
           <div class="form-check">
             <label for="interestedSource_other">
-              <input type="radio" id="interestedSource_other" name="interestedSource" value="other" [(ngModel)]="formData.interestedSource_other">
+              <input type="radio" id="interestedSource_other" name="interestedSource" value="other" [(ngModel)]="formData.interestedSources">
               Other
             </label>
           </div>
