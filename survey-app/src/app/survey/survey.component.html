@@ -39,7 +39,7 @@
         <!-- Date Info -->
         <div class="mb-3 col">
           <label for="dateOfSurvey" class="form-label required">Date of Survey:</label>
-          <input type="date" id="dateOfSurvey" placeholder="mm/dd/yyyy" class="form-control" name="dateOfSurvey" [(ngModel)]="formData.dateOfSurvey" required>
+          <input type="datetime-local" id="dateOfSurvey" name="dateOfSurvey" [(ngModel)]="formData.dateOfSurvey" required class="form-control" placeholder="mm/dd/yyyy" >
         </div>
 
         <!-- City Info -->
@@ -82,23 +82,23 @@
 
       <!-- Defines three of the questions -->
       <div class="row" style="margin-left: 10px;">
+
         <div class="col">
+
           <label>
             1. What did you like the most about the campus?
           </label>
             <!-- Defines the use fo check boxes using these selection choices -->
-
-          <!-- Student -->  
-          <div class="form-check" style="margin-top: 10px">
-            <label>
-              <input type="checkbox" id="likedOptions_students" name="likedOptions[students]" [(ngModel)]="formData.likedOptions_students">
-               Students
-            </label>
-          </div>
-
-          <!-- Location -->  
+            <!-- Student -->  
+            <div class="form-check" style="margin-top: 10px">
+              <label  for="likedOptions_students">
+                <input type="checkbox" id="likedOptions_students" name="likedOptions[students]" [(ngModel)]="formData.likedOptions_students">
+                Students
+              </label>
+            </div>
+            <!-- Location -->  
           <div class="form-check">
-            <label>
+            <label for="likedOptions_location">
               <input type="checkbox" id="likedOptions_location" name="likedOptions[location]" [(ngModel)]="formData.likedOptions_location">
                Location
             </label>
@@ -106,7 +106,7 @@
 
           <!-- Campus --> 
           <div class="form-check">
-            <label>
+            <label for="likedOptions_campus">
               <input type="checkbox" id="likedOptions_campus" name="likedOptions[campus]" [(ngModel)]="formData.likedOptions_campus">
                Campus
             </label>
@@ -114,7 +114,7 @@
 
           <!-- Atmosphere --> 
           <div class="form-check">
-            <label>
+            <label for="likedOptions_atmosphere">
               <input type="checkbox" id="likedOptions_atmosphere" name="likedOptions[atmosphere]" [(ngModel)]="formData.likedOptions_atmosphere">
                Atmosphere
             </label>
@@ -122,7 +122,7 @@
 
           <!-- Dorm Rooms --> 
           <div class="form-check">
-            <label>
+            <label for="likedOptions_dormRooms">
               <input type="checkbox" id="likedOptions_dormRooms" name="likedOptions[dormRooms]" [(ngModel)]="formData.likedOptions_dormRooms">
                Dorm Rooms
             </label>
@@ -130,7 +130,7 @@
 
           <!-- Sports --> 
           <div class="form-check">
-            <label> 
+            <label for="likedOptions_sports"> 
               <input type="checkbox" id="likedOptions_sports" name="likedOptions[sports]" [(ngModel)]="formData.likedOptions_sports">
               Sports
             </label>
@@ -139,15 +139,13 @@
         </div>
 
       <div class="col">
-        <div class="form-group">
-          <div>
+          <label>
             2. How did you become interested in GMU?
-          <!-- Defines the use of radio buttons -->
-          </div>
+          </label>
 
           <!-- Friends -->
           <div class="form-check" style="margin-top: 10px">
-            <label>
+            <label for="interestedSource_friends">
               <input type="radio" id="interestedSource_friends" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSource_friends">
               Friends
             </label>
@@ -155,7 +153,7 @@
 
           <!-- Television -->
           <div class="form-check">
-            <label>
+            <label for="interestedSource_television">
               <input type="radio" id="interestedSource_television" name="interestedSource" value="television" [(ngModel)]="formData.interestedSource_television">
               Television
             </label>
@@ -163,7 +161,7 @@
 
           <!-- Internet -->
           <div class="form-check">
-            <label>
+            <label for="interestedSource_internet">
               <input type="radio" id="interestedSource_internet" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSource_internet">
               Internet
             </label>
@@ -172,29 +170,24 @@
 
           <!-- Other -->
           <div class="form-check">
-            <label>
+            <label for="interestedSource_other">
               <input type="radio" id="interestedSource_other" name="interestedSource" value="other" [(ngModel)]="formData.interestedSource_other">
               Other
             </label>
           </div>
-
-        </div>
       </div>
 
-      
-     
 
       <div class="col">
-        <div aria-required="true">
+        <label for="recommend">
           3. Liklihood of Recommending GMU to others?
-          <!-- Defines the use of a dropdown menu -->
-        </div>
+        </label>
         <div class="dropdown">
-          <select class="btn btn-secondary dropdown-toggle OutlineText" style="margin-top: 20px; background-color: #FFCC33;" >
-            <option value="VeryLikely">Very Likely</option>
+          <select id="recommend" name="recommend" [(ngModel)]="formData.recommend" class="btn btn-secondary dropdown-toggle OutlineText" style="margin-top: 20px; background-color: #FFCC33;" >
+            <option value="" disabled selected>Select an option</option>
+            <option value="Very Likely">Very Likely</option>
             <option value="Likely">Likely</option>
             <option value="Unlikely">Unlikely</option>
-            <option selected = "selected">Select An Option</option>
           </select>
         </div>
           
@@ -225,5 +218,3 @@
   </form>
   </nav>
 </body>
-
-
