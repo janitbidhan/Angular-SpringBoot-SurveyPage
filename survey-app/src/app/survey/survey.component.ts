@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SurveyComponent {
   formData: any = {
+    recommend:"Select",
     likedOptions_students: false,
     likedOptions_location: false,
     likedOptions_campus: false,
@@ -54,7 +55,20 @@ export class SurveyComponent {
 
     // Check if atleast 2 options are selected from formData likedoption
     if (surveyData.likedOptions.length < 2) {
-      alert('Please select at least two options from the Liked Options section.');
+      alert('Please select at least two options from the Liked Options Question.');
+      return
+    }
+
+    if(!(surveyData.interestedSource==="friends" || surveyData.interestedSource==="television"
+      || surveyData.interestedSource==="internet" || surveyData.interestedSource==="other") ){
+      alert('Please select at one option from the sources Question.');
+      return
+    }
+
+
+    if(!(surveyData.interestedSource==="Very Likely" || surveyData.interestedSource==="Likely"
+      || surveyData.interestedSource==="Unlikely") ){
+      alert('Please select at one option from the Recommendation question.');
       return
     }
     // Doing post call

@@ -146,24 +146,24 @@
 
           <!-- Friends -->
           <div class="form-check" style="margin-top: 10px">
-            <label for="interestedSource_friends">
-              <input type="radio" id="interestedSource_friends" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSources">
+            <label>
+              <input type="radio" name="interestedSource" value="friends" [(ngModel)]="formData.interestedSource">
               Friends
             </label>
           </div>
 
           <!-- Television -->
           <div class="form-check">
-            <label for="interestedSource_television">
-              <input type="radio" id="interestedSource_television" name="interestedSource" value="television" [(ngModel)]="formData.interestedSources">
+            <label>
+              <input type="radio"  name="interestedSource" value="television" [(ngModel)]="formData.interestedSource">
               Television
             </label>
           </div>
 
           <!-- Internet -->
           <div class="form-check">
-            <label for="interestedSource_internet">
-              <input type="radio" id="interestedSource_internet" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSources">
+            <label>
+              <input type="radio" name="interestedSource" value="internet" [(ngModel)]="formData.interestedSource">
               Internet
             </label>
           </div>
@@ -171,8 +171,8 @@
 
           <!-- Other -->
           <div class="form-check">
-            <label for="interestedSource_other">
-              <input type="radio" id="interestedSource_other" name="interestedSource" value="other" [(ngModel)]="formData.interestedSources">
+            <label>
+              <input type="radio" name="interestedSource" value="other" [(ngModel)]="formData.interestedSource">
               Other
             </label>
           </div>
@@ -184,8 +184,8 @@
           3. Liklihood of Recommending GMU to others?
         </label>
         <div class="dropdown">
-          <select id="recommend" name="recommend" [(ngModel)]="formData.recommend" class="btn btn-secondary dropdown-toggle OutlineText" style="margin-top: 20px; background-color: #FFCC33;" >
-            <option value="" disabled selected>Select an option</option>
+          <select id="recommend" value="Select" name="recommend" [(ngModel)]="formData.recommend" class="btn btn-secondary dropdown-toggle OutlineText" style="margin-top: 20px; background-color: #FFCC33;" >
+            <option value="Select" disabled selected="selected">Select an option</option>
             <option value="Very Likely">Very Likely</option>
             <option value="Likely">Likely</option>
             <option value="Unlikely">Unlikely</option>
