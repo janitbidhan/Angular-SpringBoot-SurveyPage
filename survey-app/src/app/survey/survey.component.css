@@ -1,0 +1,5 @@
+/* Defines required asterisk display style */
+.required:after {
+  content:" *";
+  color: red;
+}

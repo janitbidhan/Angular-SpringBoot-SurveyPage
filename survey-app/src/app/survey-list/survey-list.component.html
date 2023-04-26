@@ -1,0 +1,29 @@
+<body style="background-color: powderblue;">
+<div style="background: #FFCC33; height: fit-content;"><h1 style="font-family: cursive;
+    size: 10px;
+    text-align: center;
+    padding-top: 10px;">History of Surveys</h1></div>
+
+
+<nav class="container navbar bg-body-tertiary rounded-3 first-content shadow p-3 mb-5 bg-body-tertiary rounded">
+  <div class="row">
+    <div class="col-sm-4 mb-3" *ngFor="let survey of surveys">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">{{survey.firstName}} {{survey.lastName}}</h5>
+          <p class="card-subtitle">{{survey.dateOfSurvey | date:'medium'}}</p>
+        </div>
+        <div class="card-body">
+          <p><strong>Address:</strong> {{survey.streetAddress}}, {{survey.city}}, {{survey.state}} {{survey.zip}}</p>
+          <p><strong>Telephone:</strong> {{survey.telephoneNumber}}</p>
+          <p><strong>Email:</strong> {{survey.email}}</p>
+          <p><strong>Liked options:</strong> {{ (survey.likedOptions)}}</p>
+          <p><strong>Interested source:</strong> {{ (survey.interestedSource)}}</p>
+          <p><strong>Recommend:</strong> {{survey.recommend}}</p>
+          <p><strong>Additional comments:</strong> {{survey.additionalComments}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
