@@ -66,8 +66,8 @@ export class SurveyComponent {
     }
 
 
-    if(!(surveyData.interestedSource==="Very Likely" || surveyData.interestedSource==="Likely"
-      || surveyData.interestedSource==="Unlikely") ){
+    if(!(surveyData.recommend==="Very Likely" || surveyData.recommend==="Likely"
+      || surveyData.recommend==="Unlikely") ){
       alert('Please select at one option from the Recommendation question.');
       return
     }
