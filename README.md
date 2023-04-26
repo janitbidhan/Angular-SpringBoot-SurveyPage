@@ -27,7 +27,7 @@ CockroachDB Serveless
 The application allows users to:
 1. View all surveys
 2. Submit a survey 
-<img src="./survey-app/src/survey.gif" alt="home"/>
+<img src="./survey-app/src/survey-gmu.gif" alt="home"/>
 
 
 ## API Documentation
