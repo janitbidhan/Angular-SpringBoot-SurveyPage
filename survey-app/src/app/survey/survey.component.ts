@@ -1,5 +1,5 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-survey',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SurveyComponent {
   formData: any = {
-    recommend:"Select",
+    recommend: "Select",
     likedOptions_students: false,
     likedOptions_location: false,
     likedOptions_campus: false,
@@ -17,7 +17,8 @@ export class SurveyComponent {
     likedOptions_sports: false,
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   submitForm() {
 
@@ -48,7 +49,7 @@ export class SurveyComponent {
         this.formData.likedOptions_dormRooms === true ? 'dormRooms' : '',
         this.formData.likedOptions_sports === true ? 'sports' : '',
       ].filter(Boolean),
-      interestedSource:this.formData.interestedSource,
+      interestedSource: this.formData.interestedSource,
       recommend: this.formData.recommend,
       additionalComments: this.formData.additionalComments
     };
@@ -59,15 +60,15 @@ export class SurveyComponent {
       return
     }
 
-    if(!(surveyData.interestedSource==="friends" || surveyData.interestedSource==="television"
-      || surveyData.interestedSource==="internet" || surveyData.interestedSource==="other") ){
+    if (!(surveyData.interestedSource === "friends" || surveyData.interestedSource === "television"
+      || surveyData.interestedSource === "internet" || surveyData.interestedSource === "other")) {
       alert('Please select at one option from the sources Question.');
       return
     }
 
 
-    if(!(surveyData.recommend==="Very Likely" || surveyData.recommend==="Likely"
-      || surveyData.recommend==="Unlikely") ){
+    if (!(surveyData.recommend === "Very Likely" || surveyData.recommend === "Likely"
+      || surveyData.recommend === "Unlikely")) {
       alert('Please select at one option from the Recommendation question.');
       return
     }

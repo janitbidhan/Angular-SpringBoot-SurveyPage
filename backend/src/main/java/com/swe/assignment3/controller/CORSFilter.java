@@ -3,8 +3,17 @@ package com.swe.assignment3.controller;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 
+/*
+Team:
+Janit Bidhan
+Rosy Sultana
+Brenda Henriquez
+Uday Kumar Kamalapuram
+Description: CORSFilter allows calls from anywhere to backend.
+ */
 @Component
 public class CORSFilter implements Filter {
 
@@ -23,9 +32,11 @@ public class CORSFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {}
+    public void init(FilterConfig filterConfig) throws ServletException {
+    }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
 
 }

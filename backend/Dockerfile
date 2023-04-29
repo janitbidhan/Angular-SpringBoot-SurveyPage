@@ -1,3 +1,11 @@
+# /*
+# Team:
+# Janit Bidhan
+# Rosy Sultana
+# Brenda Henriquez
+# Uday Kumar Kamalapuram
+# Description: Main Docker File
+#  */
 FROM openjdk:latest
 
 CMD ["mvn clean install"]

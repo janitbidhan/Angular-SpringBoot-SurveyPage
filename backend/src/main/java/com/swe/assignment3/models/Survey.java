@@ -4,6 +4,14 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+/*
+Team:
+Janit Bidhan
+Rosy Sultana
+Brenda Henriquez
+Uday Kumar Kamalapuram
+Description: Entity/Model File.
+ */
 @Entity
 @Table(name = "survey")
 public class Survey {
@@ -40,10 +48,10 @@ public class Survey {
     @Column(name = "date_of_survey", nullable = false)
     private LocalDateTime dateOfSurvey;
 
-    @Column(name = "liked_options",columnDefinition = "jsonb")
+    @Column(name = "liked_options", columnDefinition = "jsonb")
     private String likedOptions;
 
-    @Column(name = "interested_source",columnDefinition = "jsonb")
+    @Column(name = "interested_source", columnDefinition = "jsonb")
     private String interestedSource;
 
     @Column(name = "recommend", nullable = false)

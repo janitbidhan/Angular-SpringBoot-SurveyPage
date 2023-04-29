@@ -1,5 +1,14 @@
+/**<!--!*-->*/
+/*<!--Team:-->*/
+/*<!--Janit Bidhan-->*/
+/*<!--Rosy Sultana-->*/
+/*<!--Brenda Henriquez-->*/
+/*<!--Uday Kumar Kamalapuram-->*/
+/*<!--Description: CSS FILE.-->*/
+/*<!--*!-->*/
+/**!*/
 /* Defines required asterisk display style */
 .required:after {
-  content:" *";
+  content: " *";
   color: red;
 }

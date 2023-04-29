@@ -13,6 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+/*
+Team:
+Janit Bidhan
+Rosy Sultana
+Brenda Henriquez
+Uday Kumar Kamalapuram
+Description: REST Controller file.
+ */
 @RestController
 @RequestMapping("/surveys")
 public class SurveyController {

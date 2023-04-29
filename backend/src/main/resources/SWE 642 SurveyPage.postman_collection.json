@@ -1,77 +1,77 @@
 {
-	"info": {
-		"_postman_id": "a8d63875-053a-4b1f-aecc-3bdf9d6ba12f",
-		"name": "SWE 642 SurveyPage",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3762945"
-	},
-	"item": [
-		{
-			"name": "Get Surveys",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/surveys",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"surveys"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Submit a Survey",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"Jan\",\n    \"lastName\": \"Doe\",\n    \"streetAddress\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\",\n    \"telephoneNumber\": \"555-555-5555\",\n    \"email\": \"jan.doe@gmu.edu\",\n    \"dateOfSurvey\": \"2022-04-12T10:00:00\",\n    \"likedOptions\": \"{\\\"students\\\":true,\\\"location\\\":true,\\\"campus\\\":true,\\\"atmosphere\\\":false,\\\"dormRooms\\\":false,\\\"sports\\\":true}\",\n    \"interestedSource\": \"{\\\"friends\\\":false,\\\"television\\\":true,\\\"internet\\\":false,\\\"other\\\":false}\",\n    \"recommend\": \"Very Likely\",\n    \"additionalComments\": \"Great experience overall!\"\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/surveys",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"surveys"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Fetch single Survey",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/surveys/856048372370866177",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"surveys",
-						"856048372370866177"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "a8d63875-053a-4b1f-aecc-3bdf9d6ba12f",
+    "name": "SWE 642 SurveyPage",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3762945"
+  },
+  "item": [
+    {
+      "name": "Get Surveys",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/surveys",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "surveys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit a Survey",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"Jan\",\n    \"lastName\": \"Doe\",\n    \"streetAddress\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\",\n    \"telephoneNumber\": \"555-555-5555\",\n    \"email\": \"jan.doe@gmu.edu\",\n    \"dateOfSurvey\": \"2022-04-12T10:00:00\",\n    \"likedOptions\": \"{\\\"students\\\":true,\\\"location\\\":true,\\\"campus\\\":true,\\\"atmosphere\\\":false,\\\"dormRooms\\\":false,\\\"sports\\\":true}\",\n    \"interestedSource\": \"{\\\"friends\\\":false,\\\"television\\\":true,\\\"internet\\\":false,\\\"other\\\":false}\",\n    \"recommend\": \"Very Likely\",\n    \"additionalComments\": \"Great experience overall!\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/surveys",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "surveys"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch single Survey",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/surveys/856048372370866177",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "surveys",
+            "856048372370866177"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }

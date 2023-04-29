@@ -13,6 +13,14 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+/*
+Team:
+Janit Bidhan
+Rosy Sultana
+Brenda Henriquez
+Uday Kumar Kamalapuram
+Description: SurveyService for main business logic File.
+ */
 @Service
 public class SurveyService {
 
@@ -24,7 +32,6 @@ public class SurveyService {
         return surveyRepository.save(survey);
     }
 
-    //TODO: ADD MORE VALIDATIONS
     public Survey validateAndTransformJsonToSurvey(String json) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(json);
