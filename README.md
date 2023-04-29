@@ -2,10 +2,10 @@
 This is a sample application that demonstrates how to build a web-based student survey application using Spring Boot, CockroachDB, and Angular.
 
 ## Requirements
-Java 8 or later
-Node.js 
-Angular CLI 
-CockroachDB Serveless
+- Java 8 or later
+- Node.js 
+- Angular CLI 
+- CockroachDB Serveless
 
 ## Setup
 1. Clone the repository: git clone https://github.com/janitbidhan/Angular-SpringBoot-SurveyPage
@@ -34,12 +34,12 @@ The application allows users to:
 The application provides a RESTful API that allows clients to interact with the survey data. 
 
 ## Technologies Used
-Spring Boot
-CockroachDB
-Angular
-PostMan
-Docker Desktop
-DBeaver
+- Spring Boot
+- CockroachDB
+- Angular
+- PostMan
+- Docker Desktop
+- DBeaver
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
